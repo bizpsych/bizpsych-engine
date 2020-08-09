@@ -5,6 +5,7 @@ $(document).ready(function() {
   	$("#submit").fadeIn(1000);
   }
 
+
   $("#counter").text(existingMembers.length);
 
   for(let member of existingMembers) {
