@@ -291,17 +291,19 @@ $(document).ready(function() {
         type: "Trial"
       }
 
-     	let companyHTML = `<div class="company-box" id="company-${i}">
-            <p class="name" style="margin-top: 40px">${name}</p>
-            <p class="contact">${contact}</p>
-            <p class="email">${email}</p>
-            <div>
-              <label for="full-report">Full report</label>
-          		<input type="checkbox" class="full-report" name="full-report">
-            </div>
-            <p class="type">Trial</p>
-            <button type="button" class="delete-company">Sterge nahui</button>
-          </div>`;
+     	let companyHTML = `<div class="company-box box-second" id="company-${i}">
+        <p class="type">Trial</p>
+        <div class="company-avatar avatar-second"></div>
+        <p class="name">${name}</p>
+        <p class="contact">${contact}</p>
+        <p class="email email-team">${email}</p>
+        <div class="report-status w-embed"><label class="label-paid" for="full-report">Full report</label>
+          <input type="checkbox" class="full-report" name="full-report">
+        </div>
+        <a href="#" class="delete-company w-inline-block">
+          <div class="remove-label">Remove</div>
+        </a>
+      </div>`;
 
      	existingCompanies.push(newCompany);
       if (existingCompanies.length === 1)  {
