@@ -193,17 +193,24 @@ $(document).ready(function() {
     	fullReportIds.push(company.id);
     }
     $("#container").append(`
-      <div class="company-box" id="company-${company.id}">
-        <p class="name" style="margin-top: 40px">${company.name}</p>
-        <p class="contact">${company.contact}</p>
-        <p class="email">${company.email}</p>
-        <div>
-         <label for="full-report">Full report</label>
-          <input type="checkbox" class="full-report" name="full-report" ${checked}>
+			<div id="company-${company.id}" class="company-box">
+        <div class="added-top">
+          <div class="type">${company.type}</div>
+          <button class="delete-company w-button">Remove</button></div>
+        <div class="added-info">
+          <div class="company-avatar"></div>
+          <p class="name">${company.name}</p>
+          <p class="contact">${company.contact}</p>
+          <p class="email">${company.email}</p>
         </div>
-        <p class="type">${company.type}</p>
-        <button type="button" class="delete-company">Sterge nahui</button>
-    	</div>`).children(':last').hide().fadeIn(1000);
+        <div class="added-bottom">
+          <div class="avatar-line"></div>
+          <div class="get-full-report">
+            <div class="full-report-label">Full Report</div>
+            <div class="w-embed"><input type="checkbox" class="full-report" name="full-report" ${checked}></div>
+          </div>
+        </div>
+      </div>`).children(':last').hide().fadeIn(1000);
   }
   $('#full-report-ids').val(JSON.stringify(fullReportIds));
   $('input').lc_switch();
