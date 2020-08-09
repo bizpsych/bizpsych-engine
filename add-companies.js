@@ -199,9 +199,8 @@ $(document).ready(function() {
         <p class="name">${company.name}</p>
         <p class="contact">${company.contact}</p>
         <p class="email email-team">${company.email}</p>
-        <div class="report-status w-embed"><label class="label-paid" for="full-report">Full report</label>
-          <input type="checkbox" class="full-report" name="full-report" ${checked}>
-        </div>
+        <label class="label-paid" for="full-report">Full report</label>
+        <input type="checkbox" class="full-report" name="full-report" ${checked}>
         <a href="#" class="delete-company w-inline-block">
           <div class="remove-label">Remove</div>
         </a>
@@ -297,9 +296,8 @@ $(document).ready(function() {
         <p class="name">${name}</p>
         <p class="contact">${contact}</p>
         <p class="email email-team">${email}</p>
-        <div class="report-status w-embed"><label class="label-paid" for="full-report">Full report</label>
-          <input type="checkbox" class="full-report" name="full-report">
-        </div>
+        <label class="label-paid" for="full-report">Full report</label>
+        <input type="checkbox" class="full-report" name="full-report">
         <a href="#" class="delete-company w-inline-block">
           <div class="remove-label">Remove</div>
         </a>
