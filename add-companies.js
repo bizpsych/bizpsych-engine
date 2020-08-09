@@ -324,6 +324,7 @@ $(document).ready(function() {
     }
 	});
 
+
  	$('#container').on('click', '.delete-company', function(e) {
     e.preventDefault();
     const id = $(this).parent().attr('id').split('-')[1];
