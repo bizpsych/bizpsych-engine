@@ -193,30 +193,18 @@ $(document).ready(function() {
     	fullReportIds.push(company.id);
     }
     $("#container").append(`
-			<div id="company-${company.id}" class="company-box box-second">
-        <div class="company-top">
-          <p class="type">${company.type}</p>
-          <a href="#" class="delete-company delete-second w-inline-block">
-            <div class="remove-label">Remove</div>
-          </a>
+			<div class="company-box box-second" id="company-${company.id}">
+        <p class="type">${company.type}</p>
+        <div class="company-avatar avatar-second"></div>
+        <p class="name">${company.name}</p>
+        <p class="contact">${company.contact}</p>
+        <p class="email email-team">${company.email}</p>
+        <div class="report-status w-embed"><label class="label-paid" for="full-report">Full report</label>
+          <input type="checkbox" class="full-report" name="full-report" ${checked}>
         </div>
-        <div class="team-member-info company-class-info">
-          <div class="company-avatar avatar-second"></div>
-          <div class="member-info">
-            <p class="name">${company.name}</p>
-            <p class="contact">${company.contact}</p>
-            <p class="email email-team">${company.email}</p>
-          </div>
-        </div>
-        <div class="company-bottom">
-          <div class="company-line"></div>
-          <div class="company-report">
-            <div class="full-report-label">Full Report</div>
-            <div class="w-embed">
-              <input type="checkbox" class="full-report" name="full-report" ${checked}>
-            </div>
-          </div>
-        </div>
+        <a href="#" class="delete-company w-inline-block">
+          <div class="remove-label">Remove</div>
+        </a>
       </div>`).children(':last').hide().fadeIn(1000);
   }
   $('#full-report-ids').val(JSON.stringify(fullReportIds));
