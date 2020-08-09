@@ -193,18 +193,17 @@ $(document).ready(function() {
     	fullReportIds.push(company.id);
     }
     $("#container").append(`
-			<div class="company-box box-second" id="company-${company.id}">
-        <p class="type">${company.type}</p>
-        <div class="company-avatar avatar-second"></div>
-        <p class="name">${company.name}</p>
+      <div class="company-box" id="company-${company.id}">
+        <p class="name" style="margin-top: 40px">${company.name}</p>
         <p class="contact">${company.contact}</p>
-        <p class="email email-team">${company.email}</p>
-        <label class="label-paid" for="full-report">Full report</label>
-        <input type="checkbox" class="full-report" name="full-report" ${checked}>
-        <a href="#" class="delete-company w-inline-block">
-          <div class="remove-label">Remove</div>
-        </a>
-      </div>`).children(':last').hide().fadeIn(1000);
+        <p class="email">${company.email}</p>
+        <div>
+         <label for="full-report">Full report</label>
+          <input type="checkbox" class="full-report" name="full-report" ${checked}>
+        </div>
+        <p class="type">${company.type}</p>
+        <button type="button" class="delete-company">Sterge nahui</button>
+    	</div>`).children(':last').hide().fadeIn(1000);
   }
   $('#full-report-ids').val(JSON.stringify(fullReportIds));
   $('input').lc_switch();
@@ -290,18 +289,17 @@ $(document).ready(function() {
         type: "Trial"
       }
 
-     	let companyHTML = `<div class="company-box box-second" id="company-${i}">
-        <p class="type">Trial</p>
-        <div class="company-avatar avatar-second"></div>
-        <p class="name">${name}</p>
-        <p class="contact">${contact}</p>
-        <p class="email email-team">${email}</p>
-        <label class="label-paid" for="full-report">Full report</label>
-        <input type="checkbox" class="full-report" name="full-report">
-        <a href="#" class="delete-company w-inline-block">
-          <div class="remove-label">Remove</div>
-        </a>
-      </div>`;
+     	let companyHTML = `<div class="company-box" id="company-${i}">
+            <p class="name" style="margin-top: 40px">${name}</p>
+            <p class="contact">${contact}</p>
+            <p class="email">${email}</p>
+            <div>
+              <label for="full-report">Full report</label>
+          		<input type="checkbox" class="full-report" name="full-report">
+            </div>
+            <p class="type">Trial</p>
+            <button type="button" class="delete-company">Sterge nahui</button>
+          </div>`;
 
      	existingCompanies.push(newCompany);
       if (existingCompanies.length === 1)  {
